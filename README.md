@@ -39,15 +39,17 @@ MIT — see `LICENSE`.
 
 
   </tr>
-  <tr>
+
+
    <td width="1%"><img src="https://github.com/user-attachments/assets/03b4257c-dded-4d36-8210-da51d5e8509a"/></td>
-     <td width="1%"><img src="https://github.com/Haxeeb71/BudgetBee/assets/135656763/ca082bb0-fb06-4ed9-8739-d92c5f88d1d3"/></td>
-     <td width="1%"><img src="https://github.com/Haxeeb71/BudgetBee/assets/135656763/e8882f68-c094-4046-9e45-25891edb83f9"/></td>
+     <td width="1%"><img src="https://github.com/user-attachments/assets/426407cf-f26d-47e3-81b7-a90974d77641"/></td>
+     <td width="1%"><img src="https://github.com/user-attachments/assets/523433db-8038-486c-a2eb-9f8142822640"/></td>
+     <td width="1%"><img src="https://github.com/user-attachments/assets/523433db-8038-486c-a2eb-9f8142822640"/></td>
   </tr>
 
-  </tr>
+
   <tr>
-   <td width="1%"><img src=https://github.com/Haxeeb71/BudgetBee/assets/135656763/85a53294-6868-4e63-8f62-70d5612a2aff"/></td>
+   <td width="1%"><img src="https://github.com/user-attachments/assets/bb05c1dd-fa7c-44c6-8d13-53732d311dd4"/></td>
      <td width="1%"><img src="https://github.com/Haxeeb71/BudgetBee/assets/135656763/ca082bb0-fb06-4ed9-8739-d92c5f88d1d3"/></td>
      <td width="1%"><img src="https://github.com/Haxeeb71/BudgetBee/assets/135656763/e8882f68-c094-4046-9e45-25891edb83f9"/></td>
   </tr>
