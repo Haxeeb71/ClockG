@@ -44,7 +44,7 @@ MIT — see `LICENSE`.
    <td width="1%"><img src="https://github.com/user-attachments/assets/03b4257c-dded-4d36-8210-da51d5e8509a"/></td>
      <td width="1%"><img src="https://github.com/user-attachments/assets/426407cf-f26d-47e3-81b7-a90974d77641"/></td>
      <td width="1%"><img src="https://github.com/user-attachments/assets/523433db-8038-486c-a2eb-9f8142822640"/></td>
-     <td width="1%"><img src="https://github.com/user-attachments/assets/523433db-8038-486c-a2eb-9f8142822640"/></td>
+     <td width="1%"><img src="https://github.com/user-attachments/assets/71c953ed-9ed8-4422-91d9-d712f3b78857"/></td>
   </tr>
 
 
