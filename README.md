@@ -30,10 +30,11 @@ MIT — see `LICENSE`.
 
 <table width="100%">
   <tr>
-    <td width="1%"><img src="https://github.com/Haxeeb71/BudgetBee/assets/135656763/eff734fd-84cc-4a69-a0b6-376ea8aace41"/></td>
+    <td width="1%"><img src="https://github.com/user-attachments/assets/def7d004-ae14-44da-80d5-eacb46a32e87"/></td>
      <td width="1%"><img src="https://github.com/Haxeeb71/BudgetBee/assets/135656763/e2778da8-a573-476a-b04b-e5f58525137d"/></td>
      <td width="1%"><img src="https://github.com/Haxeeb71/BudgetBee/assets/135656763/5fed24b4-4038-4628-9174-5e43ccaaf898"/></td>
     
+
 
   </tr>
   <tr>
