@@ -27,6 +27,7 @@ MIT — see `LICENSE`.
 
 ## Screenshots
 
+<img width="1190" height="2531" alt="ss3" src="https://github.com/user-attachments/assets/03b4257c-dded-4d36-8210-da51d5e8509a" />
 
 <table width="100%">
   <tr>
@@ -40,7 +41,7 @@ MIT — see `LICENSE`.
 
   </tr>
   <tr>
-   <td width="1%"><img src=https://github.com/Haxeeb71/BudgetBee/assets/135656763/85a53294-6868-4e63-8f62-70d5612a2aff"/></td>
+   <td width="1%"><img src="https://github.com/user-attachments/assets/03b4257c-dded-4d36-8210-da51d5e8509a"/></td>
      <td width="1%"><img src="https://github.com/Haxeeb71/BudgetBee/assets/135656763/ca082bb0-fb06-4ed9-8739-d92c5f88d1d3"/></td>
      <td width="1%"><img src="https://github.com/Haxeeb71/BudgetBee/assets/135656763/e8882f68-c094-4046-9e45-25891edb83f9"/></td>
   </tr>
