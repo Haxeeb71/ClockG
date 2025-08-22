@@ -27,13 +27,14 @@ MIT — see `LICENSE`.
 
 ## Screenshots
 
-<img width="1190" height="2531" alt="ss3" src="https://github.com/user-attachments/assets/03b4257c-dded-4d36-8210-da51d5e8509a" />
+
 
 <table width="100%">
   <tr>
     <td width="1%"><img src="https://github.com/user-attachments/assets/def7d004-ae14-44da-80d5-eacb46a32e87"/></td>
      <td width="1%"><img src="https://github.com/user-attachments/assets/e353ba1b-3981-4b0a-861e-9bd5a4f3db5e"/></td>
      <td width="1%"><img src="https://github.com/user-attachments/assets/8bd15840-ddbd-443a-9a0f-d234404e0c07"/></td>
+    <td width="1%"><img src="https://github.com/user-attachments/assets/8bd15840-ddbd-443a-9a0f-d234404e0c07"/></td>
   </tr>
 
 
