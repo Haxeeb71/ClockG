@@ -47,7 +47,6 @@ MIT — see `LICENSE`.
   <tr>
    <td width="1%"><img src="https://github.com/user-attachments/assets/bb05c1dd-fa7c-44c6-8d13-53732d311dd4"/></td>
      <td width="1%"><img src="https://github.com/user-attachments/assets/e342e299-a84e-4a6b-bd7e-d149649f714f"/></td>
-     <td width="1%"><img src="https://github.com/Haxeeb71/BudgetBee/assets/135656763/e8882f68-c094-4046-9e45-25891edb83f9"/></td>
   </tr>
     
   
