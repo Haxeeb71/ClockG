@@ -46,11 +46,12 @@ MIT — see `LICENSE`.
      <td width="1%"><img src="https://github.com/user-attachments/assets/523433db-8038-486c-a2eb-9f8142822640"/></td>
      <td width="1%"><img src="https://github.com/user-attachments/assets/71c953ed-9ed8-4422-91d9-d712f3b78857"/></td>
   </tr>
+<img width="1190" height="2531" alt="ss11111" src="https://github.com/user-attachments/assets/e342e299-a84e-4a6b-bd7e-d149649f714f" />
 
 
   <tr>
    <td width="1%"><img src="https://github.com/user-attachments/assets/bb05c1dd-fa7c-44c6-8d13-53732d311dd4"/></td>
-     <td width="1%"><img src="https://github.com/Haxeeb71/BudgetBee/assets/135656763/ca082bb0-fb06-4ed9-8739-d92c5f88d1d3"/></td>
+     <td width="1%"><img src="https://github.com/user-attachments/assets/e342e299-a84e-4a6b-bd7e-d149649f714f"/></td>
      <td width="1%"><img src="https://github.com/Haxeeb71/BudgetBee/assets/135656763/e8882f68-c094-4046-9e45-25891edb83f9"/></td>
   </tr>
     
