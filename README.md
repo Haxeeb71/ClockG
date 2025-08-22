@@ -33,7 +33,7 @@ MIT — see `LICENSE`.
     <td width="1%"><img src="https://github.com/user-attachments/assets/def7d004-ae14-44da-80d5-eacb46a32e87"/></td>
      <td width="1%"><img src="https://github.com/user-attachments/assets/e353ba1b-3981-4b0a-861e-9bd5a4f3db5e"/></td>
      <td width="1%"><img src="https://github.com/user-attachments/assets/8bd15840-ddbd-443a-9a0f-d234404e0c07"/></td>
-    
+  </tr>
 
 
 
