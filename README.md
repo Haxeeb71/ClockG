@@ -1,18 +1,44 @@
-# clockG
+# ClockG
 
-A Flutter app replicating Google Clock features: Alarm, World Clock, Timer, Stopwatch, and Bedtime — with a cyberpunk yellow theme.
+A stunning, futuristic Flutter clock application replicating Google Clock features with an electric **Cyberpunk Neo-Minimalist** aesthetic (Cyber Yellow `#FFD300`, Neon Teal `#00FFC6`, Deep OLED Black `#0A0D12`, and dark layered surfaces).
 
-## Features
-- Alarm: repeat, labels, custom sound, snooze, gradual volume
-- World Clock: add cities, timezone/DST aware
-- Timer: multiple timers, pause/reset
-- Stopwatch: laps, 10ms precision
-- Bedtime: schedule, gentle wake, reminders
+## Key Features
 
-## Tech
-- Flutter + Dart, Provider
-- SQLite (sqflite)
-- flutter_local_notifications, timezone
+- **Alarm**:
+  - Dynamic "Next Alarm" countdown banner (e.g. *"Rings in 6 hr 45 min"*).
+  - High-impact digital typography with AM/PM badges.
+  - Interactive weekday indicator pills (`M T W T F S S`) with glowing active indicators.
+  - Redesigned bottom sheet editor with time picker preview, weekday chips, custom snooze slider, sound picker, and gradual volume toggle.
+- **World Clock**:
+  - Exquisite custom-painted Analog + Digital Local Clock with a sweeping second hand and GMT offset.
+  - World city cards with day/night indicator icons (Sun vs. Moon), relative time differences (`+5 HRS`, `YESTERDAY`), and timezone codes.
+  - Searchable directory of 30+ major global cities with 1-tap addition.
+- **Timer**:
+  - Hero circular countdown progress ring with a glowing runner head and neon sweep arc.
+  - Big tactile controls (Start, Pause, Reset, and `+1:00` quick extend).
+  - Quick 1-tap preset chips (1m, 3m, 5m, 10m, 15m, 25m Pomodoro, 30m).
+  - Secondary timer cards with mini circular progress rings.
+- **Stopwatch**:
+  - 60-second hybrid sweeping analog dial with high-frequency millisecond digital readout.
+  - Large tactile action buttons (Start, Pause, Resume, Lap, Reset).
+  - Persistent state across tab navigation.
+  - Pro lap table with split deltas and automatic highlighting of the fastest (green) and slowest (red) laps.
+- **Bedtime**:
+  - Celestial sleep schedule card with automatic sleep duration calculation (*"8 hr 00 min of sleep"*).
+  - Dual interactive Bedtime (Moon) and Wake (Sunrise) schedule cards.
+  - Gentle Wake and Bedtime Reminder routine toggles.
+  - Sleep consistency health tips.
+- **Ringing Alarm**:
+  - Concentric pulsing glowing radar wave rings around the alarm bell.
+  - Huge glowing cyber time display with dedicated Snooze and Dismiss actions.
+
+## Tech Stack
+
+- Flutter 3 + Dart (Null Safety)
+- State Management: `Provider` with lifted multi-provider architecture and `IndexedStack`
+- Database: SQLite via `sqflite`
+- Notifications: `flutter_local_notifications` with timezone & exact alarm scheduling
+- Audio: `audioplayers` with gradual volume fade-in
 
 ## Build
 ```bash

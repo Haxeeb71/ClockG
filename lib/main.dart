@@ -13,6 +13,10 @@ import 'providers/timer_provider.dart';
 import 'services/navigation.dart';
 import 'screens/ringing_screen.dart';
 
+import 'providers/stopwatch_provider.dart';
+import 'providers/world_clock_provider.dart';
+import 'providers/bedtime_provider.dart';
+
 class _NavIndexProvider extends ChangeNotifier {
   int _index = 0;
   int get index => _index;
@@ -50,12 +54,21 @@ class ClockGApp extends StatelessWidget {
           create: (_) => TimerProvider(AppDatabase()),
           update: (_, db, prev) => prev ?? TimerProvider(db),
         ),
+        ChangeNotifierProxyProvider<AppDatabase, WorldClockProvider>(
+          create: (_) => WorldClockProvider(AppDatabase()),
+          update: (_, db, prev) => prev ?? WorldClockProvider(db),
+        ),
+        ChangeNotifierProvider(create: (_) => StopwatchProvider()),
+        ChangeNotifierProxyProvider<NotificationService, BedtimeProvider>(
+          create: (_) => BedtimeProvider(NotificationService()),
+          update: (_, notifs, prev) => prev ?? BedtimeProvider(notifs),
+        ),
       ],
       child: MaterialApp(
-        title: 'clockG',
+        title: 'ClockG',
         theme: AppTheme.light(),
         darkTheme: AppTheme.dark(),
-        themeMode: ThemeMode.system,
+        themeMode: ThemeMode.dark,
         navigatorKey: appNavigatorKey,
         home: const _RootScaffold(),
         debugShowCheckedModeBanner: false,
@@ -86,38 +99,54 @@ class _RootScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final nav = context.watch<_NavIndexProvider>();
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
-      body: _tabs[nav.index],
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: nav.index,
-        onDestinationSelected: nav.setIndex,
-        destinations: const [
-          NavigationDestination(
-            icon: Icon(Icons.alarm_outlined),
-            selectedIcon: Icon(Icons.alarm),
-            label: 'Alarm',
+      body: IndexedStack(
+        index: nav.index,
+        children: _tabs,
+      ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          border: Border(
+            top: BorderSide(
+              color: isDark ? AppTheme.cyberBorder : const Color(0xFFE2E8F0),
+              width: 1,
+            ),
           ),
-          NavigationDestination(
-            icon: Icon(Icons.public_outlined),
-            selectedIcon: Icon(Icons.public),
-            label: 'Clock',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.timer_outlined),
-            selectedIcon: Icon(Icons.timer),
-            label: 'Timer',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.timer_10_outlined),
-            selectedIcon: Icon(Icons.timer_10),
-            label: 'Stopwatch',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.bedtime_outlined),
-            selectedIcon: Icon(Icons.bedtime),
-            label: 'Bedtime',
-          ),
-        ],
+        ),
+        child: NavigationBar(
+          selectedIndex: nav.index,
+          onDestinationSelected: nav.setIndex,
+          height: 68,
+          destinations: const [
+            NavigationDestination(
+              icon: Icon(Icons.alarm_outlined),
+              selectedIcon: Icon(Icons.alarm),
+              label: 'Alarm',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.public_outlined),
+              selectedIcon: Icon(Icons.public),
+              label: 'Clock',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.timer_outlined),
+              selectedIcon: Icon(Icons.timer),
+              label: 'Timer',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.timer_10_outlined),
+              selectedIcon: Icon(Icons.timer_10),
+              label: 'Stopwatch',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.bedtime_outlined),
+              selectedIcon: Icon(Icons.bedtime),
+              label: 'Bedtime',
+            ),
+          ],
+        ),
       ),
     );
   }

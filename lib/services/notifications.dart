@@ -60,7 +60,7 @@ class NotificationService {
         'Alarm',
         scheduled,
         details,
-        androidAllowWhileIdle: true,
+        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
         payload: (alarm.id ?? 0).toString(),
         uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
       );
@@ -78,7 +78,7 @@ class NotificationService {
         'Repeating Alarm',
         candidate,
         details,
-        androidAllowWhileIdle: true,
+        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
         matchDateTimeComponents: DateTimeComponents.dayOfWeekAndTime,
         payload: (alarm.id ?? 0).toString(),
         uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,

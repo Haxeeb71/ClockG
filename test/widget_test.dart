@@ -1,30 +1,72 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:clockg/main.dart';
+import 'package:clockg/theme/app_theme.dart';
+import 'package:clockg/providers/stopwatch_provider.dart';
+import 'package:provider/provider.dart';
+import 'package:clockg/screens/stopwatch_screen.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  TestWidgetsFlutterBinding.ensureInitialized();
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  test('AppTheme defines cyber colors and dark theme', () {
+    final dark = AppTheme.dark();
+    expect(dark.scaffoldBackgroundColor, AppTheme.cyberBlack);
+    expect(dark.colorScheme.primary, AppTheme.cyberYellow);
+    expect(dark.colorScheme.secondary, AppTheme.accentTeal);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    final light = AppTheme.light();
+    expect(light.brightness, Brightness.light);
+  });
+
+  testWidgets('StopwatchScreen renders controls and stopwatch dial', (WidgetTester tester) async {
+    final stopwatchProvider = StopwatchProvider();
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.dark(),
+        home: ChangeNotifierProvider<StopwatchProvider>.value(
+          value: stopwatchProvider,
+          child: const StopwatchScreen(),
+        ),
+      ),
+    );
+
+    expect(find.text('Stopwatch'), findsOneWidget);
+    expect(find.text('START'), findsOneWidget);
+    expect(find.text('00:00'), findsOneWidget);
+    expect(find.text('.00'), findsOneWidget);
+    expect(find.text('READY'), findsOneWidget);
+
+    // Tap start
+    await tester.tap(find.text('START'));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(stopwatchProvider.isRunning, isTrue);
+    expect(find.text('PAUSE'), findsOneWidget);
+    expect(find.text('LAP'), findsOneWidget);
+
+    // Tap lap
+    await tester.tap(find.text('LAP'));
+    await tester.pump();
+
+    expect(stopwatchProvider.laps.length, 1);
+    expect(find.text('LAP'), findsOneWidget);
+    expect(find.text('SPLIT'), findsOneWidget);
+
+    // Tap pause
+    await tester.tap(find.text('PAUSE'));
+    await tester.pump();
+
+    expect(stopwatchProvider.isRunning, isFalse);
+    expect(find.text('RESUME'), findsOneWidget);
+    expect(find.text('RESET'), findsOneWidget);
+
+    // Tap reset
+    await tester.tap(find.text('RESET'));
+    await tester.pump();
+
+    expect(stopwatchProvider.elapsedMs, 0);
+    expect(stopwatchProvider.laps.isEmpty, isTrue);
+    expect(find.text('START'), findsOneWidget);
   });
 }
